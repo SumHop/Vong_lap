@@ -1,25 +1,43 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.8.34316.72
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vòng lặp _ Bài 5", "Vòng lặp _ Bài 5\Vòng lặp _ Bài 5.csproj", "{13802DA1-EAB2-458E-A0C9-A5AAE94F9B90}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{13802DA1-EAB2-458E-A0C9-A5AAE94F9B90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13802DA1-EAB2-458E-A0C9-A5AAE94F9B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13802DA1-EAB2-458E-A0C9-A5AAE94F9B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13802DA1-EAB2-458E-A0C9-A5AAE94F9B90}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {49767A9C-45D0-4BB6-98FC-F09C7BBE9A80}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ex5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Bai5
+            Console.OutputEncoding = Encoding.Unicode;
+            Console.WriteLine("Bài 5:");
+            Console.WriteLine("Nhập số nguyên m: ");
+            int m = int.Parse(Console.ReadLine());
+            Console.WriteLine("Nhập số nguyên n: ");
+            int n = int.Parse(Console.ReadLine());
+            int l = m;
+            int k = n;
+            int h = 0;
+            while (m != n)
+            {
+                if (m > n)
+                {
+                    m = m - n;
+                }
+                else
+                {
+                    n = n - m;
+                }
+                h++;
+                Console.WriteLine("Vòng lặp thứ: " + h);
+                Console.WriteLine("m: " + m);
+                Console.WriteLine("n: " + n);
+
+            }
+            Console.WriteLine("Ước chung lớn nhất của 2 số {0} và {1} là: {2}", l, k, n);
+            Console.ReadKey();
+        }
+    }
+}
