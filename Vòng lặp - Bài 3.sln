@@ -1,25 +1,30 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.8.34316.72
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vòng lặp - Bài 3", "Vòng lặp - Bài 3\Vòng lặp - Bài 3.csproj", "{2F55F1C4-A747-4959-A706-F4CCF7E64981}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2F55F1C4-A747-4959-A706-F4CCF7E64981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F55F1C4-A747-4959-A706-F4CCF7E64981}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F55F1C4-A747-4959-A706-F4CCF7E64981}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F55F1C4-A747-4959-A706-F4CCF7E64981}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {2B4ED1B2-F565-4D11-909C-C33F851799D2}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ex3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Bai3
+            Console.OutputEncoding = Encoding.Unicode;
+            Console.WriteLine("Bài 3:");
+            int n;
+            Console.WriteLine("Nhập số nguyên n: ");
+            n = Convert.ToInt32(Console.ReadLine());
+            int i = 1;
+            while (i < n)
+            {
+                if (i % 2 != 0)
+                {
+                    Console.WriteLine(i);
+                }
+                i++;
+            }
+        }
+    }
+}
