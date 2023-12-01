@@ -1,25 +1,33 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.8.34316.72
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vòng lặp - Bài 4", "Ex4\Vòng lặp - Bài 4.csproj", "{5A77C841-51DB-43EB-B18A-72A4FCCA3FE1}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5A77C841-51DB-43EB-B18A-72A4FCCA3FE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A77C841-51DB-43EB-B18A-72A4FCCA3FE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A77C841-51DB-43EB-B18A-72A4FCCA3FE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A77C841-51DB-43EB-B18A-72A4FCCA3FE1}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {2BD07079-DB0B-487A-B284-7D3B46E9463D}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ex4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Bai4
+            Console.OutputEncoding = Encoding.Unicode;
+            Console.WriteLine("Bài 4:");
+            Console.WriteLine("Tóm tắt: Gọi số gà là X, số chó là Y ");
+            int X=0,Y=0;
+            Console.WriteLine("Ta có hệ phương trình bậc 1, 2 ẩn:");
+            Console.WriteLine("X + Y = 36");
+            Console.WriteLine("2*X + 4*Y = 100 ");
+            for (int i = 0; i < 50; i++)
+            {
+                X = i;
+                Y = 36 - X;
+                if (((2 * X) + (4 * Y)) == 100)
+                {
+                    break;
+                }
+            }
+            Console.WriteLine("X: {0}; Y: {1}",X,Y);
+        }
+    }
+}
