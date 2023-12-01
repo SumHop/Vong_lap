@@ -1,25 +1,27 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.8.34316.72
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vòng lặp - Bài 1", "Vòng lặp - Bài 1\Vòng lặp - Bài 1.csproj", "{E9E81ACE-74B0-4C11-A602-0BC9399A96EB}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E9E81ACE-74B0-4C11-A602-0BC9399A96EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9E81ACE-74B0-4C11-A602-0BC9399A96EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9E81ACE-74B0-4C11-A602-0BC9399A96EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9E81ACE-74B0-4C11-A602-0BC9399A96EB}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {92170058-82D0-4BB9-AECF-D747559C5D45}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ex1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Bai1
+            Console.OutputEncoding = Encoding.Unicode;
+            Console.OutputEncoding = Encoding.UTF8;
+            int n, i;
+            Console.Write("Nhập n : ");
+            n = int.Parse(Console.ReadLine());
+            int sum = 0;
+            for (i = 1; i <= n; i++)
+            {
+                sum = sum + i;
+            }
+            Console.WriteLine("Tổng là {0}", sum);
+        }
+    }
+}
